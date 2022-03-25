@@ -286,7 +286,7 @@
         if (sessionStorage.getItem("user"))
         {
             // update "login" link to "logout"
-            $("#login").html(`<a id="logout" class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>`);
+            $("#login").html(`<a id="logout" class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>`);
 
             // on remove, clear (user) from session storage and redirect to login page
             $("#logout").on("click", function()

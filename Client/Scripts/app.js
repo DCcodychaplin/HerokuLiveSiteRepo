@@ -161,7 +161,7 @@
     }
     function CheckLogin() {
         if (sessionStorage.getItem("user")) {
-            $("#login").html(`<a id="logout" class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>`);
+            $("#login").html(`<a id="logout" class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>`);
             $("#logout").on("click", function () {
                 sessionStorage.clear();
                 $("#login").html(`<a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>`);
