@@ -1,0 +1,20 @@
+{
+    "contacts":
+    [
+        {
+            "FullName": "Peter Parker",
+            "EmailAddress": "spiderman@example.com",
+            "ContactNumber": "4576589685"
+        },
+        {
+            "FullName": "Mister Smith",
+            "EmailAddress": "mistersmith@example.com",
+            "ContactNumber": "4164568875"
+        },
+        {
+            "FullName": "Steve Rogers",
+            "EmailAddress": "captainamerica@example.com",
+            "ContactNumber": "4575862365"
+        }
+    ]        
+}
