@@ -133,7 +133,7 @@ router.get('/delete/:id', function(req, res, next)
             res.end(err);
         }
 
-        // delete successfull
+        // delete successful
         res.redirect('/contact-list');
     });
 });
@@ -163,7 +163,6 @@ router.post('/edit/:id', function(req, res, next)
         
         res.redirect('/contact-list');
     });
-
 });
 
 export default router;
