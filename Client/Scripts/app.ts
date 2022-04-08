@@ -147,7 +147,7 @@
             }
         });
     }
-
+    
     function DisplayContactListPage()
     {
         console.log("Contact-List Page");
@@ -191,59 +191,6 @@
     function DisplayLoginPage()
     {
         console.log("Login page");
-
-        let messageArea = $("messageArea");
-        messageArea.hide();
-
-        $("#loginButton").on("click", function()
-        {
-            // set success to false by default and create new empty User object
-            let success = false;
-            let newUser = new core.User();
-
-            let username = document.forms[0].username.value as string;
-            let password = document.forms[0].password.value as string;
-
-            // get data from JSON file
-            $.get("./Data/users.json", function(data)
-            {
-                // for each user in data
-                for (const user of data.users)
-                {
-                    // if user exists, update newUser, set success to true, and break
-                    if (username == user.Username && password == user.Password)
-                    {
-                        newUser.fromJSON(user);
-                        success = true;
-                        break;
-                    }
-                }
-
-                // if username and password match, success
-                if (success)
-                {
-                    // add user to session storage
-                    sessionStorage.setItem("user", newUser.serialize() as string);
-                    messageArea.removeAttr("class").hide();
-
-                    location.href = "/contact-list";
-                }
-                else
-                {
-                    // on fail, trigger focus and select on username field and show error message
-                    $("#username").trigger("focus").trigger("select");
-                    messageArea.addClass("alert alert-danger").text("Error: Invalid login credentials").show();
-                }
-            });
-        });
-
-        // on cancel, reset form and redirect to homepage
-        $("cancelButton").on("click", function()
-        {
-            document.forms[0].reset();
-
-            location.href = "/home";
-        });
     }
 
     function DisplayRegisterPage()
@@ -261,8 +208,6 @@
         console.log("App Started!");
 
         let pageId = $("body")[0].getAttribute("id");
-
-        CheckLogin();
 
         switch(pageId)
         {
