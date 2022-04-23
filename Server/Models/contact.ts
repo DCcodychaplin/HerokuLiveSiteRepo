@@ -1,3 +1,9 @@
+/*
+ * Cody Chaplin - 100557080
+ * Logan Morris - 100795796
+ * 22/04/2022
+ */
+
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
